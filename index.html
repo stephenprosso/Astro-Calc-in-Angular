@@ -1,0 +1,25 @@
+<!doctype html>
+<html ng-app="astroInAngels">
+
+<head>
+</head>
+
+<body>
+  <h1> Welcome to the universe fatty!</h1>
+   <h2>How much do you weigh as we travel through space?!</h2>
+   <hr></hr>
+    <div ng-controller="HomeController as homeCtrl">
+        <label>Weight:</label>
+        <input ng-model="homeCtrl.inputWeight" type="number" placeholder="Enter your weight" min: "1" max: "1000"></input>
+<br>
+        <label>Planet</label>
+        <select ng-model="homeCtrl.selectedPlanet" ng-options="planets.name for planets in homeCtrl.planets"></select>
+<br>
+        <button ng-click="homeCtrl.calculate()" type="button">punch with your finger</button>
+        <p>{{homeCtrl.resultText}}</p>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+    <script src="astroindex.js"></script>
+</body>
+
+</html>
